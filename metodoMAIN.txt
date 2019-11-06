@@ -1,0 +1,14 @@
+
+
+El metodo Main es el punto de entrada de una aplicacion java
+
+public class NombreDeLaClase{
+
+	public static void        main      (String[] args){
+		System.out.println("Texto");
+
+	}
+}
+
+
+
