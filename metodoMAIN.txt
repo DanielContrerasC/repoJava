@@ -10,5 +10,9 @@ public class NombreDeLaClase{
 	}
 }
 
+	El metodo main declara todas las acciones realizadas por tu aplicacion.
+		
+	EL metodo main hace que todo lo programado pueda ser ejecutado por la consola 
+
 
 
