@@ -1,4 +1,4 @@
-package com.Arrays.Adonis;
+package com.repoJava.danielC;
 
 public class Arreglos {
 	/*Los arreglos se pueden definir como OBJETOS en los que podemos
