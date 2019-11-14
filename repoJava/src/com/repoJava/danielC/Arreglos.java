@@ -2,12 +2,12 @@ package com.repoJava.danielC;
 
 public class Arreglos {
 	/*Los arreglos se pueden definir como OBJETOS en los que podemos
-	 * guardar mas de una variable.
+	 * guardar mas de una variable. cambiando
 	 * 
 	 * Declaracion de Arreglos  : Tipo de Dato [] nombreVariable;
 	 * 							  Tipo de Dato nombreVariable[];
 	 * 
-	 * Definir el tamaño de los arreglos:
+	 * Definir el tamaÃ±o de los arreglos:
 	 * 
 	 * nombreVariable =new TipoDeDato[capacidad]
 	 * 
