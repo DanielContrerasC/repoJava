@@ -12,11 +12,14 @@ public class OperadoresDeIncrementoYDecremento {
                  */
 
         int i = 3;
+        int l = 4;
 
-        /*i++;
-        System.out.println("i++ incrementando el valor de i. i + i = " +i);
-        */
-        i++;
+        System.out.println( "i = " + i + " l = " +l);
+
+        l++;
+        System.out.println("l++ incrementando el valor de l. l + l = " +l);
+
+        ++i;
 
         System.out.println("la primera operacion que hace es igualar el valor la segunda incrementa el valor de i ." + i );
 
