@@ -5,9 +5,9 @@ public class CastDeVariables {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-//En programación hay situaciones en las se necesitan cambiar el tipo de dato en otro.Para hacerlo
+//En programaciï¿½n hay situaciones en las se necesitan cambiar el tipo de dato en otro.Para hacerlo
 //		podemos usar cast es decir que tomamos un dato y lo trnasformamos en potro tipo de dato.
-		//Se puede realizar el cast para todos los datos primitivos, con excepción de boolean, por la 
+		//Se puede realizar el cast para todos los datos primitivos, con excepciï¿½n de boolean, por la 
 		//naturalidad del tipo de dato boolean.
 		
 		//Cast
