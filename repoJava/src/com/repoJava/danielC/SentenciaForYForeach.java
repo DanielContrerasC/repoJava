@@ -31,6 +31,25 @@ public class SentenciaForYForeach {
 
         }
 
+        /*
+        Que significa.
+         break: sirve para finalizar el ciclo en el que se encuentrepara
+        para el caso de for o un while,para el swich sirve para en cuanto se cumpla la condicion
+        del case, no evalue mas.
+
+        continue : Sirve para omitir una instruccion dentro del ciclo o saltarse uno de los pasos
+
+        return : Al usarlo en metodos, le indicamos que dato debe retornar(para esto el metodo
+        no debe de ser void ), en el caso de los ciclos es para interrunpir ese ciclo y pasar
+        a las siguientes sentencias de control.
+
+
+
+
+
+
+         */
+
         
         
     }
