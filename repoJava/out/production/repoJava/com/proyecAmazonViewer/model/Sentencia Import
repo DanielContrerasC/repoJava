@@ -1,0 +1,43 @@
+_import _define a las clases o grupos de clases externas que utilices en tu clase, ésta es una palabra
+reservada y la verás siempre en el encabezado del archivo de la clase, por ejemplo:
+
+import java.util.Date;
+
+Puedes importar tan solo una clase como en el ejemplo anterior o un paquete de clases:
+
+import java.util.*;
+
+Además que puedes incluir múltiples sentencias import:
+
+import java.util.Date;
+import java.util.Calendar;
+
+Es una buena práctica especificar la importación completa del paquete de clases *, sin embargo puede causar
+conflictos con clases que vivan en diferentes paquetes pero tengan el mismo nombre
+por ejemplo:
+
+java.util.Date;
+java.sql.Date;
+
+Cuando tengamos algo similar podemos usar la siguiente sintaxis para diferenciar.
+Elegimos qué import conservar:
+
+import java.util.Date;
+
+Y la otra clase la llamamos de la siguiente forma
+
+java.sql.Date date = new java.sql.Date();
+
+En el caso de miembros static que veremos más adelante se importarán de la siguiente forma:
+
+import static java.lang.Math.PI; // importa solo la variable estática PI
+import static java.lang.Math.*; // importa todos los elementos estáticos de la clase
+
+Por lo tanto podrás usarlos así:
+
+double r = cos(PI * theta);
+
+Cosas que debes saber:
+
+Por default siempre se importa java.lang.*
+No necesitas importar las clases que estén en el mismo paquete.

@@ -1,0 +1,23 @@
+
+
+
+
+CLASES
+--------------------|      ------------------
+Movie               |       Series
+--------------------|       -----------------
++id:int             |        +id:int
++title:String       |        +title:String
++genre:String       |        +genre:String
++creator:String     |        +creator:String
++duration: int      |        +duration:int
++year: short        |        +year:short
+viewed: boolean     |        +viewed:boolean
+                    |
++timeViewed: int    |        +sesscionQuantity
+--------------------|        +chapters:Chapter
+                    |      ---------------------
++see()              |       +getters():type
++getter():type      |       +setters(type)
++setters(type)      |
+--------------------

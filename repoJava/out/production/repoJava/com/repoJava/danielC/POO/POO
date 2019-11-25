@@ -1,0 +1,76 @@
+programacion Orientada a objetos
+
+Se trata de descomponer un problema en subproblemas ,mas subproblemas
+
+Definir un Dominio del problema PROBLEM DOMAIN
+
+recoplilacion de requisitos del cliente y tener por escrito un alcance
+
+¿Que queremos lograr?
+
+ver un problema como un ecenario del problema y tratar de simularlo con objetos
+
+IDENTIFICAR Objetos
+
+pueden ser fisicos o conceptuales
+
+Tienen atributos (caracteristicas)
+tamaño
+nombre
+forma
+representan el estado del objeto
+
+Los nombres y los atributos de los objetos por lo general son sustantivos
+
+            user, session
+
+las operaciones suelen ser verbos o sustantivos y verbo
+
+            login, makeReport
+
+
+Analisando un Objeto.
+
+un objeto tiene atributos.
+ejemplo.
+
+objeto CArro
+
+atributos
+        matricula   comportamiento
+                    mostrarDatos
+        marca       esVendido
+        modelo      reversa
+        precio
+        vendido
+
+  Clase
+ Una clase es una forma en como definimos tu objeto para generar mas objetos
+
+ LAs clases son descriptivas son platillas
+
+ Estrucutura de una Clase Auto
+
+ public class Auto{
+
+ ATRIBUTOS
+ int id;
+ String matricula;
+ String marca;
+ String modelo;
+ double precio;
+ boolean vendido;
+
+ Comportamiento
+ public void mostrarDatos(){
+
+ }
+ public boolean es esVendido(){
+
+ }
+
+
+
+
+
+
