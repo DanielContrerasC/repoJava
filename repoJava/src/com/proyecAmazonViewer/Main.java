@@ -10,11 +10,11 @@ public class Main {
 
     public static void main(String[] args) {
 
+        showMenu();
 
-        Movie movie = new Movie();
-        movie.title  = "COCO";
-        movie.duration = 120;
+    }
 
+    public static void showMenu(){
 
         int exit =0;
         do{
@@ -40,7 +40,7 @@ public class Main {
                     break;
                 case 1:
                     showMovies();
-                break;
+                    break;
                 case 2:
                     showSeries();
                     break;
@@ -66,6 +66,8 @@ public class Main {
 
 
         }while (exit != 0);
+
     }
 
+    public static void showMenu(){}
 }
