@@ -1,0 +1,10 @@
+Cuando se llama a un metodo, se se pasa automaticamente un argumento implicito que es una
+referencia al objeto invocado(es decir, el objeto sobre el que se llama al metodo).
+esta referencia se llama this.
+
+this nos ayuda a referenciar los valores de los metodos que se van a invocar.
+
+puede ser cuando hay sobrecarga de metodos o constructores.
+
+cada metodo o constructor que lleven el mismo nombre deveran de tener parametros diferentes
+para que puedan ser llamdos al ser invocados.
