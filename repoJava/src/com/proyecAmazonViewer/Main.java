@@ -10,7 +10,7 @@ public class Main {
                                                                /*para corregir el error se le hizo un casting con Short al campo years por que marca el error de que no es un campo entero*/
         Movie movie= new Movie("Coco", "Animation", (short)2017 );
         //showMenu();
-        movie.showData();
+
 
     }
 

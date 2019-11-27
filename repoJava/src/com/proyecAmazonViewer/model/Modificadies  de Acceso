@@ -1,0 +1,22 @@
+
+
+Modificadies de Acceso
+
+public:
+
+Tendra acceso a todo otras clases, a los package, subclases y otros
+
+protected:
+
+Tendra acceso a clase, packages, subclase, Solamente
+
+default:
+
+Tendra acceso a clase y package
+
+private:
+
+tendra acceso a clase
+
+
+A LA HORA DE ESCONDER UN DATO A ESTO SE LE LLAMA ENCAPSULAMIENTO

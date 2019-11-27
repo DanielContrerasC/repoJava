@@ -2,12 +2,17 @@ package com.proyecAmazonViewer.model;
 
 public class Chapter {
 
-    int id;
-    String title;
+    private int id;
+    private String title;
+    private int duration;
+    private short year;
+    private boolean viewer;
+    private int timeViewer;
+    private int sessionNumber;
 
-    int duration;
-    short year;
-    boolean viewer;
-    int timeViewer;
-    int sessionNumber;
+    public Chapter(String title, int duration, short year) {
+        this.title = title;
+        this.duration = duration;
+        this.year = year;
+    }
 }
