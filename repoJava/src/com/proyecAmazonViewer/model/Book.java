@@ -2,22 +2,17 @@ package com.proyecAmazonViewer.model;
 
 import java.util.Date;
 
-public class Book {
+public class Book  extends Publicacion {
     private int id;
-    private String title;
-    private Date editionDate;
-    private String editorial;
-    private String[] autors;
     private String isbn;
     private boolean reader;
     private int timeReaded;
 
-    public Book(String title, Date editionDate, String editorial, String isbn) {
-        super();
-        this.title = title;
-        this.editionDate = editionDate;
-        this.editorial = editorial;
+    public Book(String title, Date editionDate, String editorial, String[] authors, String isbn, boolean reader, int timeReaded) {
+        super(title, editionDate, editorial, authors);
         this.isbn = isbn;
+        this.reader = reader;
+        this.timeReaded = timeReaded;
     }
 
     public int getId() {
@@ -26,38 +21,6 @@ public class Book {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Date getEditionDate() {
-        return editionDate;
-    }
-
-    public void setEditionDate(Date editionDate) {
-        this.editionDate = editionDate;
-    }
-
-    public String getEditorial() {
-        return editorial;
-    }
-
-    public void setEditorial(String editorial) {
-        this.editorial = editorial;
-    }
-
-    public String[] getAutors() {
-        return autors;
-    }
-
-    public void setAutors(String[] autors) {
-        this.autors = autors;
     }
 
     public String getIsbn() {

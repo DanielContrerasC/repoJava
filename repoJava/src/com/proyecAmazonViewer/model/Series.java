@@ -10,6 +10,7 @@ public class Series extends Film {
         super(title, genre, creator, duration);
         this.sessionQuantity=sessionQuantity;
 
+
     }
 
     public int getId(){
@@ -31,4 +32,6 @@ public class Series extends Film {
     public void setChapters(Chapter[] chapters) {
         this.chapters = chapters;
     }
+
+
 }

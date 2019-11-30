@@ -11,6 +11,11 @@ public class Chapter extends Movie {
         this.sessionNumber=sessionNumber;
     }
 
+    @Override
+    public int getId() {
+        return this.id;
+    }
+
     public int getSessionNumber() {
         return sessionNumber;
     }

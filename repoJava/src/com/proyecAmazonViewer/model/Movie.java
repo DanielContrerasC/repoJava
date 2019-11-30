@@ -7,8 +7,9 @@ public class Movie extends Film {
 
     public Movie(String title, String genre, String creator, int duration, short year) {
         super(title, genre, creator, duration);
-       setYear(year);
+        setYear(year);
     }
+
 
     public void showData(){
         //System.out.println("Title: " +title);
@@ -19,11 +20,21 @@ public class Movie extends Film {
     public int getId() {
         return id;
     }
+
     public int getTimeViewer() {
         return timeViewer;
     }
 
     public void setTimeViewer(int timeViewer) {
         this.timeViewer = timeViewer;
+    }
+
+    @Override
+    public String toString() {
+        return " Title: " +getTitle()+
+                "\n Genero: " +getGenre()+
+                    "\n Year: " +getYear()+
+                        "\n Creator: " +getCreator()+
+                            "\n Duration: "+getDuration();
     }
 }

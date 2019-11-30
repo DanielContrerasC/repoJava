@@ -1,0 +1,5 @@
+ /*
+    Los getters (de la palabra en ingles get-obtener) indica que podemos tomar algun valor
+    de un atributo y los setters(de la palabra ingles set-poner/fijar) podemos guardar algun valor
+    sobre algun atributo
+     */
