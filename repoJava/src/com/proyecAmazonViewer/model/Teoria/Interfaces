@@ -6,4 +6,8 @@ que podria contener solo constantes, definiciones de metodos,
 metodos con moddificadores de acceso default.
 
 Se establece la forma de una clase (nombre de metodos, lista de argumentos y 
-tipos de retorno, pero no bloques de codigo)
+tipos de retorno, pero no bloques de codigo) 
+
+palabra para la interfaz en java
+
+			implements
