@@ -1,23 +1,36 @@
 
+Que es una clase.
 
+Son plantillas pra la creacion de objetos, en los que se conocce como programacion
+orientada a objetos,la cual es una de las principales paradigmas de desarrollo
+de software en la actualidad.
 
 
 CLASES
---------------------|      ------------------
-Movie               |       Series
---------------------|       -----------------
-+id:int             |        +id:int
-+title:String       |        +title:String
-+genre:String       |        +genre:String
-+creator:String     |        +creator:String
-+duration: int      |        +duration:int
-+year: short        |        +year:short
-viewed: boolean     |        +viewed:boolean
-                    |
-+timeViewed: int    |        +sesscionQuantity
---------------------|        +chapters:Chapter
-                    |      ---------------------
-+see()              |       +getters():type
-+getter():type      |       +setters(type)
-+setters(type)      |
---------------------
+
+
+--------------------|      |-----------------|
+Movie               |      | Series          |     | Chapter        |
+--------------------|      | ----------------|     |----------------|
++id:int             |      |  +id:int        |     | +id            |
++title:String       |      | +title:String   |     | +title         |
++genre:String       |      |  +genre:String  |     | +duration      |
++creator:String     |      |  +creator:String|     | +year          |
++duration: int      |      |  +duration:int  |     | +viewed        |
++year: short        |      |  +year:short    |     | +timeviewed    |
+viewed: boolean     |      |  +viewed:boolean|     | + seccionNumber|
+                    |      |                 |
++timeViewed: int    |      | +sesscionQuantity
+--------------------|      | +chapters:Chapter
+                    |      |--------------------
++see()              |      | +getters():type
++getter():type      |      | +setters(type)
++setters(type)      |      |
+--------------------       |---------------------
+
+
+
+
+
+
+

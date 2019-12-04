@@ -1,0 +1,5 @@
+
+        super();
+
+    Indica que una variable o un metodo
+    es de la clase Padre (superClase)

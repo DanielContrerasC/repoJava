@@ -8,8 +8,12 @@ public class Main {
 
     public static void main(String[] args) {
                                                                /*para corregir el error se le hizo un casting con Short al campo years por que marca el error de que no es un campo entero*/
-        Movie movie= new Movie("Coco", "Animation", (short)2017 );
+        //Movie movie= new Movie("Coco", "Animation", (short)2017 );
+        //movie.setTitle("Rambo");
         //showMenu();
+        Movie movie = new Movie("coco", "animation", "  ", 120,(short)2017);
+        System.out.println(movie.toString());
+
 
 
     }

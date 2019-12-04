@@ -1,0 +1,32 @@
+
+
+La herencia es un mecanismo que permite la definición de una clase a partir
+de la definición de otra ya existente. La herencia permite compartir
+automáticamente métodos y datos entre clases, subclases y objetos. ...
+Java sólo permite herencia simple.
+
+Una subclase hereda todos los mienbros de su seper clase que estan declarados
+como public o protecd
+
+
+  ejemplo
+
+  Se heredadra los atibutos de la siguiente clase llamada film a las clases Movie, Series, Chapter
+
+    Clase
+                |--------------------------------------------|
+    Film      <-|                 Movie                      |Serie
+                  <--------------
+    +id:int                       +id:int                    +id:int
+    +title:String                 +timeViewed:int            +sessionQuantity:int
+    +genre:String                                            +chapters:Chapter
+    +creator:String               +see()
+    +duration:int                 +getters():type            +getters():type
+    +year:int                     +setters(type)             +setters(type)
+    viewed:boolean
+
+    +see()
+    +getters():type
+    +setter(type)
+
+
