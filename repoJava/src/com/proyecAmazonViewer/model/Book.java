@@ -46,4 +46,18 @@ public class Book  extends Publicacion {
     public void setTimeReaded(int timeReaded) {
         this.timeReaded = timeReaded;
     }
+    
+    @Override
+    public String toString() {
+    	// TODO Auto-generated method stub
+    	String detailBook="\n ::BOOK ::"+
+    					  "\n Title: "+getTitle()+
+    					  "\n Editorial: " +getEditorial()+
+    					  "\n Editorial Date: "+getEditionDate()+
+    					  "\n Authors: ";
+    	for (int i=0; i<getAuthors().length;i++) {
+    		detailBook += "\t" +getAuthors()[i];
+    	}
+    	return detailBook;
+    }
 }
