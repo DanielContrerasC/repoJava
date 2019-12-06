@@ -11,6 +11,7 @@ public class Magazine extends Publicacion{
     }
 
     public int getId() {
+
         return id;
     }
 
@@ -18,5 +19,11 @@ public class Magazine extends Publicacion{
         this.id = id;
     }
 
-
+    @Override
+    public String toString() {
+        return "\n :: MAGAZINE ::" +
+                "\n Title: "+ getTitle() +
+                "\n Edition: " +
+        ;
+    }
 }
