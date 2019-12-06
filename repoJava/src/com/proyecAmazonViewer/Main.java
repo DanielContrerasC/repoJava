@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-                                                               /*para corregir el error se le hizo un casting con Short al campo years por que marca el error de que no es un campo entero*/
+        /*para corregir el error se le hizo un casting con Short al campo years por que marca el error de que no es un campo entero*/
         //Movie movie= new Movie("Coco", "Animation", (short)2017 );
         //movie.setTitle("Rambo");
         //showMenu();
