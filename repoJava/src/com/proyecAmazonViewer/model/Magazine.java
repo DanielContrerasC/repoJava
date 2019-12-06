@@ -23,12 +23,4 @@ public class Magazine extends Publicacion{
     			"\n Editorial: " +getEditorial()+
     			"\n Editon Date: "+getEditionDate();
     }
-
-    @Override
-    public String toString() {
-        return "\n :: MAGAZINE ::" +
-                "\n Title: " + getTitle() +
-                "\n Edition: " + getEditorial() +
-                "\n Edition Date: " + getEditionDate();
-    }
 }

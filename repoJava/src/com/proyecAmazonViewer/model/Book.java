@@ -2,7 +2,7 @@ package com.proyecAmazonViewer.model;
 
 import java.util.Date;
 
-public class Book  extends Publicacion {
+public class Book  extends Publicacion implements IVisualizable {
     private int id;
     private String isbn;
     private boolean reader;
@@ -59,5 +59,22 @@ public class Book  extends Publicacion {
     		detailBook += "\t" +getAuthors()[i];
     	}
     	return detailBook;
+    }
+
+    @Override
+    public Date startToSee(Date dateI) {
+        return dateI;
+    }
+
+    @Override
+    public void stopToSee(Date dateI, Date dateF) {
+
+        if (dateF.getSeconds()>dateI.getSeconds()){
+
+            setTimeReaded(dateF.getSeconds() - dateI.getSeconds());
+        }else{
+            setTimeReaded(0);
+        }
+
     }
 }

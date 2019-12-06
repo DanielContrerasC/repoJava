@@ -1,13 +1,15 @@
 
-		---------Interfaces-----
+Interfaces
 
-Es un tipo de referencia similar a una clase
-que podria contener solo constantes, definiciones de metodos,
-metodos con moddificadores de acceso default.
+Es un tipo de referencia similar a una clase que podria contener solo constantes,
+definiciones de metodos, metodos con modificadores de acceso default.
 
-Se establece la forma de una clase (nombre de metodos, lista de argumentos y 
-tipos de retorno, pero no bloques de codigo) 
+Una regla.
 
-palabra para la interfaz en java
+que deben de cumplir las interfaces es que no debemos implementar ninguno de los metodos
+que declaremos ahi.
 
-			implements
+solo se dejara la firma del metodo ya que van de la mano con el poliformismo.
+
+Se establece la forma de una clase (nombres de metodos, lista de argumentos y tipo de retorno
+pero no bloques de codigo).
