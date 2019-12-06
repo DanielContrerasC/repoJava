@@ -1,10 +1,12 @@
 package com.proyecAmazonViewer.model;
 
+import java.util.ArrayList;
+
 public class Series extends Film {
 
     private int id;
     private int sessionQuantity;
-    private Chapter[] chapters;
+    private ArrayList<Chapter> chapters;
 
     public Series(String title, String genre, String creator, int duration, int sessionQuantity) {
         super(title, genre, creator, duration);
@@ -18,18 +20,22 @@ public class Series extends Film {
     }
 
     public int getSessionQuantity() {
+
         return sessionQuantity;
     }
 
     public void setSessionQuantity(int sessionQuantity) {
+
         this.sessionQuantity = sessionQuantity;
     }
 
-    public Chapter[] getChapters() {
+    public ArrayList<Chapter> getChapters() {
+
         return chapters;
     }
 
-    public void setChapters(Chapter[] chapters) {
+    public void setChapters(ArrayList<Chapter> chapters) {
+
         this.chapters = chapters;
     }
     
