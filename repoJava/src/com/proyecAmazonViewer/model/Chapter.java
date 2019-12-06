@@ -23,6 +23,16 @@ public class Chapter extends Movie {
     public void setSessionNumber(int sessionNumber) {
         this.sessionNumber = sessionNumber;
     }
+    
+    @Override
+    public String toString() {
+    	// TODO Auto-generated method stub
+    	return "\n ::CHAPTER::" +
+    			"\n Title: " +getTitle()+
+    			"\n Year: " + getYear()+
+    			"\n Creator: "+getCreator()+
+    			"\n Durtation: " +getDuration();
+    }
 
 
 }
