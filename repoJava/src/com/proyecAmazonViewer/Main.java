@@ -68,10 +68,21 @@ public class Main {
 
     public static void showMovies(){
         int exit= 0;
+
+        ArrayList<Movie> movies = Movie.makeMoviesList();
+
+
         do{
             System.out.println();
             System.out.println("::MOVIES ::");
             System.out.println();
+
+            for (int i = 1; i < movies.size(); i++) {
+
+                System.out.println(i +1 + " . " + movies.get(i).getTitle()+"Visto: "+ movies.get(i).isViewer());
+
+            }
+
         }while (exit!=0);
     }
 
