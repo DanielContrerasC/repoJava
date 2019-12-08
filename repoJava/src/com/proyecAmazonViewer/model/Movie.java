@@ -1,5 +1,6 @@
 package com.proyecAmazonViewer.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Movie extends Film implements IVisualizable {
@@ -55,5 +56,15 @@ public class Movie extends Film implements IVisualizable {
             setTimeViewer(0);
         }
 
+    }
+    public static ArrayList<Movie> makeMoviesList(){
+        ArrayList<Movie> movies =new ArrayList<>();
+        movies.add(new Movie("Movie", "Genero 1", "Creador 1", 120, (short)2017));
+
+        for (int i = 1; i <= 5; i++) {
+            movies.add(new Movie("Movie" +i, "Genero " +i, "Creador "+i, 120 +i, (short)(2017+i)));
+        }
+
+        return movies;
     }
 }

@@ -11,10 +11,6 @@ public class Main {
         //Movie movie= new Movie("Coco", "Animation", (short)2017 );
         //movie.setTitle("Rambo");
         //showMenu();
-        Movie movie = new Movie("coco", "animation", "  ", 120,(short)2017);
-        System.out.println(movie.toString());
-
-
 
     }
 
