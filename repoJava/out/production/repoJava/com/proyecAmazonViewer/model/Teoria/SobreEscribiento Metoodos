@@ -1,0 +1,16 @@
+
+Sobreescribiendo metodos.
+
+    Cuando una clase hereda de otra, y
+    en esta clase hija se define un metodo con una implenetacion distinta
+    a la de su padre.
+
+    sobreescritura
+
+    Los metodos maracados como final o static no se pueden sobreescribir.
+
+    Sobre escritura de Constructores
+
+    Un constructorr es una subclase usando los mienbros heredados de la
+    superclase, con argumetos diferentes.
+

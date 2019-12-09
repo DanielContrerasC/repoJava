@@ -10,13 +10,12 @@ public class Main {
         /*para corregir el error se le hizo un casting con Short al campo years por que marca el error de que no es un campo entero*/
         //Movie movie= new Movie("Coco", "Animation", (short)2017 );
         //movie.setTitle("Rambo");
-        //showMenu();
-
+        showMenu();
     }
 
     public static void showMenu(){
 
-        int exit =0;
+        int exit =1;
         do{
             System.out.println("BIENVENIDOS A AMAZON VIEW");
             System.err.println("");
@@ -32,7 +31,7 @@ public class Main {
 
             Scanner sc =new Scanner(System.in);
             //int response = Integer.valueOf(sc.nextLine());
-            int response =1;
+            int response = Integer.valueOf(sc.nextLine());
 
             switch (response){
                 case 0:
@@ -70,8 +69,6 @@ public class Main {
         int exit= 0;
 
         ArrayList<Movie> movies = Movie.makeMoviesList();
-
-
         do{
             System.out.println();
             System.out.println("::MOVIES ::");
@@ -79,9 +76,35 @@ public class Main {
 
             for (int i = 1; i < movies.size(); i++) {
 
-                System.out.println(i +1 + " . " + movies.get(i).getTitle()+"Visto: "+ movies.get(i).isViewer());
-
+                System.out.println(i +1 + " . " + movies.get(i).getTitle()+"Visto: "+ movies.get(i).isViewed());
             }
+
+            System.out.println("0.Regresar al menu anterior. ");
+            System.out.println();
+
+            //Leer Respuesta Ususario
+            Scanner sc = new Scanner(System.in);
+            int response = Integer.valueOf(sc.nextLine());
+
+            if (response==0){
+                showMenu();
+            }
+
+            Movie movieSelected =movies.get(response-1);
+            movieSelected.setViewer(true);
+            Date dateI = movieSelected.startToSee(new Date());
+
+            for (int i = 0; i <100000 ; i++) {
+                System.out.println("........");
+            }
+
+            //Termina de verla
+            movieSelected.stopToSee(dateI, new Date());
+            System.out.println();
+            System.out.println("Viste: " + movieSelected);
+            System.out.println("Por: " +movieSelected.getTimeViewer() + " milisegundos");
+
+
 
         }while (exit!=0);
     }
