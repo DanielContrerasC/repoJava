@@ -11,6 +11,7 @@ public class Magazine extends Publicacion{
     }
 
     public int getId() {
+
         return id;
     }
 
@@ -22,5 +23,4 @@ public class Magazine extends Publicacion{
     			"\n Editorial: " +getEditorial()+
     			"\n Editon Date: "+getEditionDate();
     }
-
 }

@@ -1,6 +1,9 @@
 package com.proyecAmazonViewer.model;
 
-public class Movie extends Film {
+import java.util.ArrayList;
+import java.util.Date;
+
+public class Movie extends Film implements IVisualizable {
 
     private int id;
     private int timeViewer;
@@ -35,5 +38,32 @@ public class Movie extends Film {
                     "\n Year: " +getYear()+
                         "\n Creator: " +getCreator()+
                             "\n Duration: "+getDuration();
+    }
+
+    @Override
+    public Date startToSee(Date dateI) {
+        return dateI;
+    }
+
+    @Override
+    public void stopToSee(Date dateI, Date dateF) {
+
+        if (dateF.getTime()>dateI.getTime()){
+
+            setTimeViewer((int) (dateF.getTime() - dateI.getTime()));
+        }else{
+            setTimeViewer(0);
+        }
+
+    }
+    public static ArrayList<Movie> makeMoviesList(){
+        ArrayList<Movie> movies =new ArrayList<>();
+
+
+        for (int i = 1; i <= 5; i++) {
+            movies.add(new Movie("Movie" +i, "Genero " +i, "Creador "+i, 120 +i, (short)(2017+i)));
+        }
+
+        return movies;
     }
 }

@@ -6,7 +6,7 @@ public class Film {
     private String creator;
     private int duration;
     private short year;
-    private boolean viewer;
+    private boolean viewed;
 
     public Film(String title, String genre, String creator, int duration) {
         this.title = title;
@@ -55,11 +55,21 @@ public class Film {
         this.year = year;
     }
 
-    public boolean isViewer() {
-        return viewer;
+    public String isViewed() {
+
+        String visto = "";
+
+        if (viewed ==true){
+
+            visto = "Si";
+        }else {
+            visto = "No";
+        }
+
+        return visto;
     }
 
     public void setViewer(boolean viewer) {
-        this.viewer = viewer;
+        this.viewed = viewer;
     }
 }
