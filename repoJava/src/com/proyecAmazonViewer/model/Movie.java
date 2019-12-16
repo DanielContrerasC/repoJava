@@ -22,7 +22,6 @@ public class Movie extends Film {
     }
 
     public int getTimeViewer() {
-        return timeViewer;
     }
 
     public void setTimeViewer(int timeViewer) {
