@@ -25,7 +25,6 @@ public class Movie extends Film implements IVisualizable {
     }
 
     public int getTimeViewer() {
-        return timeViewer;
     }
 
     public void setTimeViewer(int timeViewer) {
