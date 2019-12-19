@@ -6,41 +6,41 @@ import java.util.Date;
 public class Book  extends Publicacion implements IVisualizable {
     private int id;
     private String isbn;
-    private boolean reader;
+    private boolean readed;
     private int timeReaded;
 
-    public Book(String title, Date editionDate, String editorial, String[] authors, String isbn, boolean reader, int timeReaded) {
-        super(title, editionDate, editorial, authors);
-        this.isbn = isbn;
-        this.reader = reader;
-        this.timeReaded = timeReaded;
+    public Book(String title, Date editionDate, String editorial, String[] authors) {
+        super(title, editionDate, editorial);
+        setAuthors(authors);
     }
 
     public int getId() {
+
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getIsbn() {
+
         return isbn;
     }
 
     public void setIsbn(String isbn) {
+
         this.isbn = isbn;
     }
 
-    public boolean isReader() {
-        return reader;
+    public boolean isReaded() {
+        return readed;
     }
 
-    public void setReader(boolean reader) {
-        this.reader = reader;
+    public void setReaded(boolean readed) {
+
+        this.readed = readed;
     }
 
     public int getTimeReaded() {
+
         return timeReaded;
     }
 
@@ -81,6 +81,11 @@ public class Book  extends Publicacion implements IVisualizable {
 
     public static ArrayList<Book> makeBookList(){
         ArrayList<Book> books = new ArrayList<>();
+
+        for (int i = 0; i <=5 ; i++) {
+            books.add(new Book("Book: " + i, 22,"fxf", "Abc"));
+
+        }
         return books;
     }
 }

@@ -1,4 +1,5 @@
 package com.proyecAmazonViewer;
+import com.proyecAmazonViewer.model.Book;
 import com.proyecAmazonViewer.model.Movie;
 import java.util.ArrayList;
 import java.util.Date;
@@ -71,12 +72,11 @@ public class Main {
         ArrayList<Movie> movies = Movie.makeMoviesList();
         do{
             System.out.println();
-            System.out.println("::MOVIES ::");
+            System.out.println(":: MOVIES ::");
             System.out.println();
 
-            for (int i = 1; i < movies.size(); i++) {
-
-                System.out.println(i +1 + " . " + movies.get(i).getTitle()+"Visto: "+ movies.get(i).isViewed());
+            for (int i = 0; i < movies.size(); i++) {
+                System.out.println(i + 1 + ". " + movies.get(i).getTitle()+" Visto: "+ movies.get(i).isViewed());
             }
 
             System.out.println("0.Regresar al menu anterior. ");
@@ -90,7 +90,7 @@ public class Main {
                 showMenu();
             }
 
-            Movie movieSelected =movies.get(response-1);
+            Movie movieSelected = movies.get(response-1);
             movieSelected.setViewer(true);
             Date dateI = movieSelected.startToSee(new Date());
 
@@ -103,8 +103,6 @@ public class Main {
             System.out.println();
             System.out.println("Viste: " + movieSelected);
             System.out.println("Por: " +movieSelected.getTimeViewer() + " milisegundos");
-
-
 
         }while (exit!=0);
     }
@@ -122,11 +120,45 @@ public class Main {
 
     public static void showBooks(){
         int exit= 0;
+        ArrayList<Book> books = Book.makeBookList();
         do{
             System.out.println();
             System.out.println("::BOOKS ::");
             System.out.println();
+
+            for (int i = 1; i <books.size(); i++) {
+
+                System.out.println(i + 1 + " . " + books.get(i).getTitle()+ "Visto: " + books.get(i).isReaded());
+            }
+            System.out.println(" 0. regresa la menu anterior: ");
+            System.out.println();
+
+            //Leer respuesta de usuario
+
+            Scanner sc = new Scanner(System.in);
+            int response = Integer.valueOf(sc.nextLine());
+
+            if (response==0){
+                showMenu();
+            }
+            Book bookSelectec = books.get(response-1);
+            bookSelectec.setReaded(true);
+
+            Date dateI = bookSelectec.startToSee(new Date());
+
+            for (int i = 0; i <100000 ; i++) {
+                System.out.println("....123...." + i);
+            }
+            //Terminar de leer
+
+            bookSelectec.stopToSee(dateI, new Date());
+            System.out.println();
+            System.out.println("Leiste: " + bookSelectec);
+            System.out.println("tiempo: " + bookSelectec.getTimeReaded() + " Milisegundos. ");
+
         }while (exit!=0);
+
+
     }
 
         public static void showMagazines(){
