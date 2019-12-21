@@ -127,8 +127,6 @@ public class Main {
 
 
         }while (exit!=0);
-
-
     }
 
         public static void showMagazines(){

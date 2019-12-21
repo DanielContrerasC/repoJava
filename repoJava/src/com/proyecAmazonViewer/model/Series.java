@@ -8,9 +8,10 @@ public class Series extends Film {
     private int sessionQuantity;
     private ArrayList<Chapter> chapters;
 
-    public Series(String title, String genre, String creator, int duration, int sessionQuantity) {
+    public Series(String title, String genre, String creator, int duration, int sessionQuantity, ArrayList<Chapter> chapters) {
         super(title, genre, creator, duration);
         this.sessionQuantity=sessionQuantity;
+        this.chapters=chapters;
 
 
     }
@@ -48,6 +49,15 @@ public class Series extends Film {
     			"\n Year: " + getYear()+
     			"\n Creator: "+getCreator()+
     			"\n Duration: " +getDuration();
+    }
+
+    public static ArrayList<Series> makeSeriesList(){
+        ArrayList<Series> series = new ArrayList<>();
+
+        for (int i = 1; i<=5; i++){
+            series.add(new Series("Series " +i, "genero "+ i, "creator: " +i, 1200, 5, Chapter.makechaptersList()));
+        }
+        return series;
     }
 
 

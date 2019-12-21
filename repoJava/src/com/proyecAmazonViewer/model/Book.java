@@ -1,6 +1,5 @@
 package com.proyecAmazonViewer.model;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 public class Book  extends Publicacion implements IVisualizable {
@@ -10,8 +9,9 @@ public class Book  extends Publicacion implements IVisualizable {
     private int timeReaded;
 
     public Book(String title, Date editionDate, String editorial, String[] authors) {
-        super(title, editionDate, editorial);
+        super(title, editionDate, editorial, authors);
         setAuthors(authors);
+
     }
 
 

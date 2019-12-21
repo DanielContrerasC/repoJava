@@ -9,7 +9,7 @@ public class Publicacion {
     private String editorial;
     private String[] authors;
 
-    public Publicacion(String title, Date editionDate, String editorial) {
+    public Publicacion(String title, Date editionDate, String editorial, String[] authors) {
         super();
         this.title = title;
         this.editionDate = editionDate;
