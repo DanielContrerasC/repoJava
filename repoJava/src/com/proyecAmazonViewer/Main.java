@@ -120,41 +120,11 @@ public class Main {
 
     public static void showBooks(){
         int exit= 0;
-        ArrayList<Book> books = Book.makeBookList();
         do{
             System.out.println();
             System.out.println("::BOOKS ::");
             System.out.println();
 
-            for (int i = 1; i <books.size(); i++) {
-
-                System.out.println(i + 1 + " . " + books.get(i).getTitle()+ "Visto: " + books.get(i).isReaded());
-            }
-            System.out.println(" 0. regresa la menu anterior: ");
-            System.out.println();
-
-            //Leer respuesta de usuario
-
-            Scanner sc = new Scanner(System.in);
-            int response = Integer.valueOf(sc.nextLine());
-
-            if (response==0){
-                showMenu();
-            }
-            Book bookSelectec = books.get(response-1);
-            bookSelectec.setReaded(true);
-
-            Date dateI = bookSelectec.startToSee(new Date());
-
-            for (int i = 0; i <100000 ; i++) {
-                System.out.println("....123...." + i);
-            }
-            //Terminar de leer
-
-            bookSelectec.stopToSee(dateI, new Date());
-            System.out.println();
-            System.out.println("Leiste: " + bookSelectec);
-            System.out.println("tiempo: " + bookSelectec.getTimeReaded() + " Milisegundos. ");
 
         }while (exit!=0);
 
