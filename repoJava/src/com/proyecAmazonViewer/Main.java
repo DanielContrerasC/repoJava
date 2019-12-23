@@ -1,6 +1,10 @@
 package com.proyecAmazonViewer;
 import com.proyecAmazonViewer.model.Book;
+import com.proyecAmazonViewer.model.Chapter;
 import com.proyecAmazonViewer.model.Movie;
+import com.proyecAmazonViewer.model.Series;
+
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -37,7 +41,7 @@ public class Main {
             switch (response){
                 case 0:
                     //salir
-                    exit =0;
+                    exit = 0;
                     break;
                 case 1:
                     showMovies();
@@ -52,9 +56,10 @@ public class Main {
                     showMagazines();
                     break;
                 case 5:
-                case 6:
                     makeReport(new Date());
                     break;
+                case 6:
+                    makeReport(new Date());
                 default:
                     System.out.println();
                     System.out.println("....!!Selecciona Una Opcion¡¡....");
@@ -108,15 +113,75 @@ public class Main {
     }
 
     public static void showSeries(){
-        int exit= 0;
+        int exit= 1;
+        ArrayList<Series> series = Series.makeSeriesList();
         do{
             System.out.println();
             System.out.println("::SERIES ::");
             System.out.println();
+
+            for (int i = 0; i <series.size() ; i++) {//1. Serie 1
+                System.out.println(i +1 + " . " + series.get(i).getTitle()+" Visto " + series.get(i).isViewed());
+            }
+            System.out.println("0. Regresa al menu");
+            System.out.println();
+
+            // Leer la respuesta usuario
+
+            Scanner sc = new Scanner((System.in));
+            int response = Integer.valueOf(sc.nextLine());
+
+            if (response==0){
+                showMenu();
+            }
+
+            showChapters(series.get(response-1).getChapters());
+
+
         }while (exit!=0);
     }
 
-    public static void showChapters(){}
+    public static void showChapters(ArrayList<Chapter> chaptersOfSeriesSelected){
+        int exit =0;
+        do {
+            System.out.println();
+            System.out.println(":: CHPATERS ::");
+            System.out.println();
+
+            for (int i =0; i<chaptersOfSeriesSelected.size(); i++){
+                System.out.println(i + 1 +" . "+ chaptersOfSeriesSelected.get(i).getTitle()+ "Visto " +chaptersOfSeriesSelected.get(i).isViewed());
+
+            }
+
+            System.out.println("0. Regresa al Menu");
+            System.out.println();
+
+            //Leer reespuesta usuario
+            Scanner sc = new Scanner(System.in);
+            int response =Integer.valueOf(sc.nextLine());
+
+            if(response == 0){
+                showMenu();
+            }
+
+            Chapter chapterSelected = chaptersOfSeriesSelected.get(response-1);
+            chapterSelected.setViewer(true);
+            Date dateI = chapterSelected.startToSee(new Date());
+
+            for (int i = 0; i < 10000; i++) {
+                System.out.println(".........");
+
+            }
+
+            //Terminar de verla
+
+            chapterSelected.stopToSee(dateI, new Date());
+            System.out.println();
+            System.out.println("Viste: "+ chapterSelected);
+            System.out.println("Por: " + chapterSelected.getTimeViewer()+" Milisegundos");
+        }while (exit == 0);
+
+    }
 
     public static void showBooks(){
         int exit= 0;
