@@ -42,7 +42,7 @@ public class Report {
 
     public void makeReport(){
 
-        if ((getNameFile()!= null)&&(getTitle()=!null)&&(getContent()!=null)){
+        if ((getNameFile()!= null)&&(getTitle() != null)&&(getContent()!=null)){
 
             // Crear el archivo
             try {
@@ -59,7 +59,7 @@ public class Report {
             }
 
         }else{
-            System.out.println("Ingresa los datos de l archivo");
+            System.out.println("Ingresa los datos del archivo");
         }
 
     }
