@@ -1,9 +1,13 @@
 package com.proyecAmazonViewer;
+
+
 import com.proyecAmazonViewer.model.Book;
 import com.proyecAmazonViewer.model.Chapter;
 import com.proyecAmazonViewer.model.Movie;
 import com.proyecAmazonViewer.model.Series;
 
+import java.text.SimpleDateFormat;
+import com.AmazonReport.makeReport.Report;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,7 +21,9 @@ public class Main {
         //movie.setTitle("Rambo");
         showMenu();
     }
-
+    
+   
+    
     public static void showMenu(){
 
         int exit =1;
@@ -70,11 +76,12 @@ public class Main {
         }while (exit != 0);
 
     }
+    
+    static ArrayList<Movie> movies = Movie.makeMoviesList();
 
     public static void showMovies(){
-        int exit= 0;
-
-        ArrayList<Movie> movies = Movie.makeMoviesList();
+        int exit= 1;
+    
         do{
             System.out.println();
             System.out.println(":: MOVIES ::");
@@ -92,22 +99,26 @@ public class Main {
             int response = Integer.valueOf(sc.nextLine());
 
             if (response==0){
+            	exit = 0;
                 showMenu();
             }
+            if(response >0) {
+            	
+            	 Movie movieSelected = movies.get(response-1);
+                 movieSelected.setViewer(true);
+                 Date dateI = movieSelected.startToSee(new Date());
 
-            Movie movieSelected = movies.get(response-1);
-            movieSelected.setViewer(true);
-            Date dateI = movieSelected.startToSee(new Date());
+                 for (int i = 0; i <100000 ; i++) {
+                     System.out.println("........");
+                 }
 
-            for (int i = 0; i <100000 ; i++) {
-                System.out.println("........");
-            }
-
-            //Termina de verla
-            movieSelected.stopToSee(dateI, new Date());
-            System.out.println();
-            System.out.println("Viste: " + movieSelected);
-            System.out.println("Por: " +movieSelected.getTimeViewer() + " milisegundos");
+                 //Termina de verla
+                 movieSelected.stopToSee(dateI, new Date());
+                 System.out.println();
+                 System.out.println("Viste: " + movieSelected);
+                 System.out.println("Por: " +movieSelected.getTimeViewer() + " milisegundos");           	
+            	
+            }           
 
         }while (exit!=0);
     }
@@ -203,8 +214,24 @@ public class Main {
                 }while (exit!=0);
          }
          public static void makeReport(){
+        	 
+        	Report report = new Report();
+     		report.setNameFile("reporte");
+     		report.setExtension("txt");
+     		report.setTitle(":: VISTOS ::");
+     		String contentReport = "";
+     		
+     		for (Movie movie : movies) {
+     			if (movie.getIsViewed()) {
+     				contentReport += movie.toString() + "\n";
+     				
+     			}
+     		}
+     		report.setContent(contentReport);
+     		report.makeReport();
+     		
 
-
+        	 
          }
 
          public static void makeReport(Date date){
